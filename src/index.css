@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading {
+  font-size: 30px;
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+
+input {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button {
+  background-color: rgb(183, 162, 216);
+  border-radius: 15px;
+  width: fit-content;
+  padding: 6px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+ul li {
+  display: flex;
+  gap: 60px;
+  margin: 10px 0;
+}
+ul li p {
+  font-size: 18px;
+}
+.buttonTwo {
+  background-color: #f70505;
+  padding: 6px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.buttonThree {
+  background-color: rgb(142, 159, 14);
+  padding: 6px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.attendance {
+  padding: 150px 0;
+}
+
+tbody tr td {
+  @apply py-6 px-3 text-center;
+}
+tbody tr td:first-child {
+  @apply text-start;
+}
+tbody tr:nth-child(odd) td {
+  @apply bg-slate-100;
+}
+tbody tr:nth-child(even):hover td {
+  @apply bg-slate-200;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 80px;
+  height: 40px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #2e2e2e, #4a4a4a);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: linear-gradient(to right, #66bb6a, #43a047);
+}
+
+.toggle-switch label:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.toggle-switch input:checked + label:before {
+  transform: translateX(40px);
+  background-color: #66bb6a;
+}
